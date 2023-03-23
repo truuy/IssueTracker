@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="container">
+      <div class="nav" >
+          <div class="logo">
+            <table style="width:100%;">
+              <tr>
+                <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/I.T_logo.svg/2059px-I.T_logo.svg.png" style="width: 35px; height: 35px;" alt="image"></td>
+                <td>
+                <span style="padding-left: 10px;">Issue Tracking Web Application</span>
+                </td>
+              </tr>
+            </table>
+          </div>
+
+          <div class="menu">
+            <table style="width: 100%;">
+              <tr>
+                <td><a href="#">Home</a></td>
+                <td><a href="#">Tickets</a></td>
+                <td><a href="#">About</a></td>
+              </tr>
+            </table>   
+          </div>
+        </div>
+
+        <div class="content-container">
+            <div class="ticket-form">
+              <table style="width: 100%;">
+                <tr style="background-color: rgb(188, 228, 255);">
+                  <td style="width: 100%; text-align: center; height: 35px;"><span>Add new tickets</span></td>
+                </tr>
+                <tr>
+                  <td style="display: flex; justify-content: center; padding-top: 20px;">
+                    <form>
+                     
+                        <div class="form-group">
+                          <table class="form-table" >
+                            <tr>
+                              <td style="width: 100px; vertical-align: middle;">Title</td>
+                              <td><input type="text" name="ticketTitle"></td>
+                            </tr>
+                            <tr>
+                              <td style="width: 100px; vertical-align: middle;" ><label for="">Description</label></td>
+                              <td><input type="text" name="ticketDesc"></td>
+                            </tr>
+                            <tr>
+                              <td style="width: 100px; vertical-align: middle;"><label for="">Author</label></td>
+                              <td><input type="text" name="ticketAuth"></td>
+                            </tr>
+                            <tr>
+                              <td style="width: 100px; vertical-align: middle;"><label for="">Priority</label></td>
+                              <td><input type="text" name="ticketPrio"></td>
+                            </tr>
+                            <tr>
+                              <td style="width: 100px; vertical-align: middle;"><label for="">Issue Type</label></td>
+                              <td><input type="text" name="ticketType"></td>
+                            </tr>
+                            <tr>
+                              <td><button type="submit">Save</button></td>
+                            </tr>
+                          </table>
+                        </div>
+                    </form>
+
+                  </td>
+                </tr>
+              </table>
+              
+            </div>
+
+            <div class="tickets-display">
+              <table style="width: 100%;">
+                <tr style="background-color: rgb(188, 228, 255);">
+                  <td style="width: 100%; text-align: center; height: 35px;"><span>Tickets</span></td>
+                </tr>
+                <tr>
+                  <td>
+
+                    <div class="ticket-row" *ngFor="let ticket of tickets">
+                        <div class="ticket-row-detail" >
+                          <span>{{ ticket.ticketId }}</span>
+                          <span>{{ ticket.ticketName }}</span>
+                          <span>{{ ticket.ticketType }}</span>
+                          <span>{{ ticket.ticketPrio }}</span>
+                        </div>
+                        <div class="ticket-row-action">
+                          <a><i class='bx bxs-trash' style='color:#ff0000; width: 45px; height: 45px;'  ></i></a>
+                        </div>
+                    </div>
+
+                  </td>
+                </tr>
+              </table>
+            </div>
+        </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;900&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    padding-left: 15rem;
+    padding-right: 15rem;
+}
+.container{
+    width: 100%;
+    height: 1200px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.container .nav{
+    height: 12px;
+    width: 100%;
+    display: flex; 
+    flex-direction: row;
+    margin-bottom: 5rem;
+}
+
+.container .logo{
+    width: 100%;
+}
+
+.container .menu{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.container .menu ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.container .menu a{
+    text-decoration: none;
+    color: black;
+}
+
+.container .content-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.container .ticket-form{
+    width: 50%;
+}
+
+.container .ticket-form input{
+    height: 25px;
+    width: 300px;
+}
+
+.container .tickets-display{
+    width: 50%;
+}
+
+.container .form-group{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.container .form-group .form-table{
+    width: 100%;
+}
+
+.container .form-group .form-table tr{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding-top: 10px;
+}
+.container .form-group .form-table td{
+    font-weight: bold;
+}
+
+.container .form-group .form-table button{
+    background-color: rgb(156, 156, 156); color: rgb(0, 0, 0); border: 0px solid black; width: 50px; height: 25px;
+}
+
+.container .form-group .form-table button:hover{
+    cursor: pointer;
+    background-color: rgb(202, 202, 202);
+}
+
+.container .ticket-row{
+    width: 100%;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.container .ticket-row-detail{
+    background-color: #d1d1d1;
+    flex-grow: 1;
+    padding: 0.4em 1em;
+    display: flex;
+    justify-content: space-between;
+    color: rgb(0, 0, 0);
+}
+
+
+.container .ticket-row-action a{
+    margin-left: 30px;
+    padding: 3px;
+    
+    
+}
+
+.container .ticket-row-action a:hover{
+    
+    color: white;
+    cursor: pointer;
+    
+}
+
+
+
+
+
+
