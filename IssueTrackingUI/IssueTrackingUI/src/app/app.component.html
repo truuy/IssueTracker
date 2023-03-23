@@ -16,86 +16,77 @@
                 <td>
                 <span style="padding-left: 10px;">Issue Tracking Web Application</span>
                 </td>
+                <td ><a href="#">Home</a></td>
+                <td ><a href="#">Tickets</a></td>
+                <td ><a href="#">About</a></td>
               </tr>
+             
             </table>
           </div>
 
-          <div class="menu">
-            <table style="width: 100%;">
-              <tr>
-                <td><a href="#">Home</a></td>
-                <td><a href="#">Tickets</a></td>
-                <td><a href="#">About</a></td>
-              </tr>
-            </table>   
-          </div>
+          
         </div>
 
         <div class="content-container">
-            <div class="ticket-form">
+            <div class="tickets-display">
               <table style="width: 100%;">
-                <tr style="background-color: rgb(188, 228, 255);">
-                  <td style="width: 100%; text-align: center; height: 35px;"><span>Add new tickets</span></td>
+                <tr style="background-color: rgb(0, 0, 0); color: white;">
+                  <td style="width: 100%; text-align: center; height: 35px;"><span>Tickets</span></td>
                 </tr>
+
+                <!-- Display all current issues -->
                 <tr>
-                  <td style="display: flex; justify-content: center; padding-top: 20px;">
-                    <form>
-                     
-                        <div class="form-group">
-                          <table class="form-table" >
-                            <tr>
-                              <td style="width: 100px; vertical-align: middle;">Title</td>
-                              <td><input type="text" name="ticketTitle"></td>
-                            </tr>
-                            <tr>
-                              <td style="width: 100px; vertical-align: middle;" ><label for="">Description</label></td>
-                              <td><input type="text" name="ticketDesc"></td>
-                            </tr>
-                            <tr>
-                              <td style="width: 100px; vertical-align: middle;"><label for="">Author</label></td>
-                              <td><input type="text" name="ticketAuth"></td>
-                            </tr>
-                            <tr>
-                              <td style="width: 100px; vertical-align: middle;"><label for="">Priority</label></td>
-                              <td><input type="text" name="ticketPrio"></td>
-                            </tr>
-                            <tr>
-                              <td style="width: 100px; vertical-align: middle;"><label for="">Issue Type</label></td>
-                              <td><input type="text" name="ticketType"></td>
-                            </tr>
-                            <tr>
-                              <td><button type="submit">Save</button></td>
-                            </tr>
-                          </table>
-                        </div>
-                    </form>
+                  <td style="display: flex; justify-content: center; flex-direction: column; height: 10vw; overflow: auto;">
+
+                    <div class="ticket-row" *ngFor="let ticket of tickets">
+
+                      <div class="ticket-row-detail">
+                        <span>Issue T-{{ ticket.id }}</span>
+                        <span>{{ ticket.title }}</span> 
+                      </div>
+                      <div class="ticket-row-action">
+                        <table style="width: 100%;">
+                        <tr>
+                          <a><td style="display: flex; justify-content: center; vertical-align: middle;">
+                            <i class='bx bxs-trash' style='color:#ffffff;'  ></i>
+                          </td></a>
+                        </tr>
+                      </table>
+                      </div>
+
+                    </div>
 
                   </td>
                 </tr>
-              </table>
-              
-            </div>
 
-            <div class="tickets-display">
-              <table style="width: 100%;">
-                <tr style="background-color: rgb(188, 228, 255);">
-                  <td style="width: 100%; text-align: center; height: 35px;"><span>Tickets</span></td>
+                <!-- Add new issue -->
+                <tr>
+                  <td style="display: flex; justify-content: center; text-align: center; padding-top: 20px;"><h3>Create New Issue</h3></td>
                 </tr>
                 <tr>
-                  <td>
+                  <td style="display: flex; justify-content: center; align-items: center;">
+                    
+                      <div class="create-issue">
+                        <form #form="ngForm" (ngSubmit)="onSubmit()">
+                          <input type="text" name="title" placeholder="Enter the issue title.." style="width: 50%;" [(ngModel)]="newTicket.title">  
 
-                    <div class="ticket-row" *ngFor="let ticket of tickets">
-                        <div class="ticket-row-detail" >
-                          <span>{{ ticket.ticketId }}</span>
-                          <span>{{ ticket.ticketName }}</span>
-                          <span>{{ ticket.ticketType }}</span>
-                          <span>{{ ticket.ticketPrio }}</span>
-                        </div>
-                        <div class="ticket-row-action">
-                          <a><i class='bx bxs-trash' style='color:#ff0000; width: 45px; height: 45px;'  ></i></a>
-                        </div>
-                    </div>
+                          <div class="create-issue-action">
+                            <table style="width: 100%;">
+                            <tr>
+                              <td style="display: flex; justify-content: center; vertical-align: middle;">
+                                <button type="submit" style="background-color: transparent; border: none; cursor: pointer;"><span><i class='bx bx-plus' style='color:#ffffff;'></i></span></button>
+                                
+                              </td>
+                            </tr>
+                          </table>
+                          </div>     
 
+                        </form>
+                         
+                                      
+                      </div>
+                      
+                      
                   </td>
                 </tr>
               </table>

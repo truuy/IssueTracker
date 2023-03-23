@@ -1,10 +1,10 @@
 export interface Ticket {
-    ticketId: string;
-    ticketName: string;
-    ticketDesc: string;
-    ticketAuth: string;
-    ticketPrio: string;
-    ticketType: string;
-    ticketCreated: string;
-    ticketCompleted: string;
+    id: string;
+    title: string;
+    description: string;
+    author: string; 
+    priority: string;
+    type: string;
+    created: string;
+    completed: string;
 }

@@ -10,6 +10,16 @@ import { Ticket } from './model/tickets.model';
 export class AppComponent implements OnInit {
   title = 'IssueTrackingUI';
   tickets: Ticket[] = [];
+  newTicket: Ticket = {
+    id:'',
+    title: '',
+    description: '',
+    author: '',
+    priority: '',
+    type: '',
+    created: '',
+    completed: ''
+  }
 
   constructor(
     private ticketService: TicketsService
@@ -18,18 +28,23 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     this.getAllTickets();
+    
   }
 
   getAllTickets()
   {
     this.ticketService.getAllTickets().subscribe(response =>{
-
-
       this.tickets = response;
-      console.log(this.tickets);
-      
-
+      console.log(response);
     });
     
   }
+
+
+  onSubmit()
+  {
+    console.log(this.newTicket);
+  }
+
+
 }

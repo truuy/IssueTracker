@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ob8B9ENu8k3l3733zGDsCaQQprql2NRjTrFNo25eHdE99OCEs4Tx88hjpgJdZVrBycF0LG9ypBfKhXqJlKsacA==",
+  "dgSpecHash": "FmaEK3v1aov+ncRIvH/jQkg+grkwkpqjar5EF8ezlPO4/D+IYze/mNLYemG85jsnmM0Q7jfD+vtf6VN8sWCLdw==",
   "success": true,
-  "projectFilePath": "D:\\Projects\\IssueTrackingWebApp\\IssueTrackingWebAPI\\IssueTrackingWebAPI\\IssueTrackingWebAPI.csproj",
+  "projectFilePath": "D:\\Projects\\IssueTrackingWebApp\\IssueTracker\\IssueTrackingWebAPI\\IssueTrackingWebAPI\\IssueTrackingWebAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Troy\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Troy\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

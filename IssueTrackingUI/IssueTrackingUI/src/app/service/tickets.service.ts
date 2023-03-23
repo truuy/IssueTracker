@@ -8,11 +8,8 @@ import { Ticket } from '../model/tickets.model';
 })
 export class TicketsService {
     baseUrl = 'https://localhost:7098/api/Issue'
-  constructor(
-
-    private http: HttpClient
-
-  ) { }
+    
+  constructor(private http: HttpClient ) { }
 
   //Get all cards from the api
   getAllTickets(): Observable<Ticket[]>{

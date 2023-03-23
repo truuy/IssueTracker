@@ -3728,11 +3728,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projects\\IssueTrackingWebApp\\IssueTrackingWebAPI\\IssueTrackingWebAPI\\IssueTrackingWebAPI.csproj",
+      "projectUniqueName": "D:\\Projects\\IssueTrackingWebApp\\IssueTracker\\IssueTrackingWebAPI\\IssueTrackingWebAPI\\IssueTrackingWebAPI.csproj",
       "projectName": "IssueTrackingWebAPI",
-      "projectPath": "D:\\Projects\\IssueTrackingWebApp\\IssueTrackingWebAPI\\IssueTrackingWebAPI\\IssueTrackingWebAPI.csproj",
+      "projectPath": "D:\\Projects\\IssueTrackingWebApp\\IssueTracker\\IssueTrackingWebAPI\\IssueTrackingWebAPI\\IssueTrackingWebAPI.csproj",
       "packagesPath": "C:\\Users\\Troy\\.nuget\\packages\\",
-      "outputPath": "D:\\Projects\\IssueTrackingWebApp\\IssueTrackingWebAPI\\IssueTrackingWebAPI\\obj\\",
+      "outputPath": "D:\\Projects\\IssueTrackingWebApp\\IssueTracker\\IssueTrackingWebAPI\\IssueTrackingWebAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
